@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
     public CharacterController controller;
 
     public float speed = 10f;
@@ -14,6 +13,13 @@ public class Movement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    public bool isSprinting = false;
+    public float sprintingSpeed;
+
+    public bool isCrouching = false;
+    public float standHeight = 1.85f;
+    public float crouchHeight = 1.25f;
 
     Vector3 velocity;
     bool isGrounded;
@@ -34,14 +40,15 @@ public class Movement : MonoBehaviour
             velocity.y = -2f;
         }
 
+        //Normal Movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z; 
 
-        controller.Move(move*speed*Time.deltaTime);
+        controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButton("Jump") && isGrounded) //Jumping
         {
             velocity.y = Mathf.Sqrt(jumpHeight + -2f * gravity);
         }
@@ -49,5 +56,34 @@ public class Movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftShift)) //Sprinting
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+
+        if(isSprinting == true)
+        {
+            controller.Move(move * sprintingSpeed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.C)) //Crouching
+        {
+            isCrouching = true;
+        }
+        else
+        {
+            controller.height = standHeight;
+            isCrouching = false;
+        }
+
+        if (isCrouching == true)
+        {
+            controller.height = crouchHeight;            
+        }
     }
 }
