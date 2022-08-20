@@ -56,6 +56,14 @@
     <Compile Include="Assets\Script\Player\MouseLook.cs" />
     <Compile Include="Assets\Script\Player\Movement.cs" />
     <Compile Include="Assets\Script\CameraShake.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShaker.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakeInstance.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnTrigger.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Demo\ShakeDemo.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeByDistance.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnKeyPress.cs" />
+    <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

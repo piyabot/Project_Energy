@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class Movement : MonoBehaviour
 {
@@ -69,6 +70,7 @@ public class Movement : MonoBehaviour
         if(isSprinting == true)
         {
             controller.Move(move * sprintingSpeed * Time.deltaTime);
+            CameraShaker.Instance.ShakeOnce(0.8f, 0.8f, -0.5f, 0.5f);
         }
 
         if (Input.GetKey(KeyCode.C)) //Crouching
