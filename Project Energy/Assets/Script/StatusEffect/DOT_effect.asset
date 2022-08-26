@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7793eef5e0678794aad911bbf3fc4271, type: 3}
   m_Name: DOT_effect
   m_EditorClassIdentifier: 
-  DOTAmount: 10
-  TickSpeed: 0.5
+  DOTAmount: 1
+  TickSpeed: 0.1
   MovementPenalty: 0.5
-  LifeTime: 1
+  LifeTime: 10

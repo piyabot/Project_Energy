@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour, IEffectable
     public bool isCrouching = false;
     public float standHeight = 1.85f;
     public float crouchHeight = 1.25f;
+    public float crouchingSpeed;
 
     private StatusData _data;
 
@@ -77,12 +78,13 @@ public class PlayerController : MonoBehaviour, IEffectable
         if(isSprinting == true)
         {
             controller.Move(move * sprintingSpeed * Time.deltaTime);
-            CameraShaker.Instance.ShakeOnce(0.8f, 0.8f, -0.5f, 0.5f);
+            CameraShaker.Instance.ShakeOnce(0.4f, 0.4f, -0.3f, 0.3f);
         }
 
-        if (Input.GetKey(KeyCode.C)) //Crouching
+        if (Input.GetKey(KeyCode.C) && !isSprinting) //Crouching
         {
             isCrouching = true;
+            controller.Move(move * crouchingSpeed * Time.deltaTime);
         }
         else
         {
@@ -111,6 +113,8 @@ public class PlayerController : MonoBehaviour, IEffectable
     public void RemoveEffect()
     {
         _data = null;
+        currentEffectTime = 0f;
+        lastTickTime = 0f;
     }
 
     private float currentEffectTime = 0f;
@@ -119,13 +123,12 @@ public class PlayerController : MonoBehaviour, IEffectable
     {
         currentEffectTime += Time.deltaTime;
 
-        if (currentEffectTime >= _data.LifeTime) RemoveEffect();
-
         if (_data.DOTAmount != 0 && currentEffectTime > lastTickTime + _data.TickSpeed)
         {
             lastTickTime = currentEffectTime;
             currentHP -= _data.DOTAmount;
             healthBar.SetHealth(currentHP);
         }
+        if (currentEffectTime >= _data.LifeTime) RemoveEffect();
     }
 }
