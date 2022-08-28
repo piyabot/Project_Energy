@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour, IEffectable
     public float maxHP = 100;
     public float currentHP;
     public HealthBar healthBar;
+    public GameObject Lose;
 
     public float speed = 10f;
     public float gravity = -9.81f;
@@ -101,13 +102,13 @@ public class PlayerController : MonoBehaviour, IEffectable
         if (currentHP <= 0)
         {
             currentHP = 0;
+            Lose.SetActive(true);
         }
 
         if (currentHP >= 100)
         {
             currentHP = 100;
         }
-
     }
 
     public void TakeDamage(float damage)

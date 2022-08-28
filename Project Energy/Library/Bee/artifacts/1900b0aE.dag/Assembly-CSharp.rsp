@@ -347,6 +347,7 @@
 "Assets/EZ Camera Shake/Scripts/CameraShaker.cs"
 "Assets/EZ Camera Shake/Scripts/Utilities/CameraUtilities.cs"
 "Assets/Script/CameraShake.cs"
+"Assets/Script/FinishPoint.cs"
 "Assets/Script/Hazard/Hazard.cs"
 "Assets/Script/Hazard/StatusEffect/IEffectable.cs"
 "Assets/Script/Hazard/StatusEffect/StatusData.cs"
