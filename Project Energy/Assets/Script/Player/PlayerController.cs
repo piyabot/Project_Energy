@@ -97,6 +97,17 @@ public class PlayerController : MonoBehaviour, IEffectable
             controller.height = crouchHeight;            
         }
         if (_data != null) TriggerEffect(); 
+
+        if (currentHP <= 0)
+        {
+            currentHP = 0;
+        }
+
+        if (currentHP >= 100)
+        {
+            currentHP = 100;
+        }
+
     }
 
     public void TakeDamage(float damage)
@@ -107,6 +118,7 @@ public class PlayerController : MonoBehaviour, IEffectable
 
     public void ApplyEffect(StatusData _data)
     {
+        RemoveEffect();
         this._data = _data;
     }
 

@@ -61,16 +61,17 @@
     <Compile Include="Assets\Script\Player\HealthBar.cs" />
     <Compile Include="Assets\Script\CameraShake.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShaker.cs" />
-    <Compile Include="Assets\Script\Hazard.cs" />
+    <Compile Include="Assets\Script\Hazard\Hazard.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakeInstance.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnTrigger.cs" />
-    <Compile Include="Assets\Script\StatusEffect\StatusData.cs" />
+    <Compile Include="Assets\Script\Hazard\StatusEffect\StatusData.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
-    <Compile Include="Assets\Script\StatusEffect\IEffectable.cs" />
+    <Compile Include="Assets\Script\Hazard\StatusEffect\IEffectable.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\ShakeDemo.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeByDistance.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnKeyPress.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
+    <Compile Include="Assets\Script\Player\PickUpController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
