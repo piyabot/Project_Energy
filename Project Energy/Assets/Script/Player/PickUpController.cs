@@ -46,10 +46,11 @@ public class PickUpController : MonoBehaviour
         if (pickObj.GetComponent<Rigidbody>())
         {
             heldObjRB = pickObj.GetComponent<Rigidbody>();
+            heldObjRB.velocity = Vector3.zero;
+            heldObjRB.angularVelocity = Vector3.zero;
             heldObjRB.useGravity = false;
             heldObjRB.drag = 10;
-            heldObjRB.constraints = RigidbodyConstraints.FreezePosition;
-
+            //heldObjRB.constraints = RigidbodyConstraints.FreezePosition;
             heldObjRB.transform.parent = holdArea;
             heldObj = pickObj;
         }
@@ -68,8 +69,7 @@ public class PickUpController : MonoBehaviour
     {
             heldObjRB.useGravity = true;
             heldObjRB.drag = 1;
-            heldObjRB.constraints = RigidbodyConstraints.FreezePosition;
-
+            //heldObjRB.constraints = RigidbodyConstraints.FreezePosition;
             heldObjRB.transform.parent = null;
             heldObj = null;
     }

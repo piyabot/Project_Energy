@@ -111,16 +111,15 @@ public class PlayerController : MonoBehaviour, IEffectable
         }
     }
 
-    public void TakeDamage(float damage)
-    {
-        currentHP -= damage;
-        healthBar.SetHealth(currentHP);
-    }
-
     public void ApplyEffect(StatusData _data)
     {
         RemoveEffect();
         this._data = _data;
+    }
+    public void ApplyWeakEffect(StatusData _weakdata)
+    {
+        RemoveEffect();
+        this._data = _weakdata;
     }
 
     public void RemoveEffect()
