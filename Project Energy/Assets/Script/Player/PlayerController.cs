@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour, IEffectable
     public float maxHP = 100;
     public float currentHP;
     public HealthBar healthBar;
+    public GameObject nearDeath;
     public GameObject Lose;
 
     public float speed = 10f;
@@ -22,11 +23,6 @@ public class PlayerController : MonoBehaviour, IEffectable
 
     public bool isSprinting = false;
     public float sprintingSpeed;
-
-    public bool isCrouching = false;
-    public float standHeight = 1.85f;
-    public float crouchHeight = 1.25f;
-    public float crouchingSpeed;
 
     private StatusData _data;
 
@@ -81,22 +77,7 @@ public class PlayerController : MonoBehaviour, IEffectable
             controller.Move(move * sprintingSpeed * Time.deltaTime);
             CameraShaker.Instance.ShakeOnce(0.4f, 0.4f, -0.3f, 0.3f);
         }
-
-        if (Input.GetKey(KeyCode.C) && !isSprinting) //Crouching
-        {
-            isCrouching = true;
-            controller.Move(move * crouchingSpeed * Time.deltaTime);
-        }
-        else
-        {
-            controller.height = standHeight;
-            isCrouching = false;
-        }
-
-        if (isCrouching == true)
-        {
-            controller.height = crouchHeight;            
-        }
+      
         if (_data != null) TriggerEffect(); 
 
         if (currentHP <= 0)
@@ -104,7 +85,14 @@ public class PlayerController : MonoBehaviour, IEffectable
             currentHP = 0;
             Lose.SetActive(true);
         }
-
+        if (currentHP <= 30)
+        {
+            nearDeath.SetActive(true);
+        }
+        else
+        {
+            nearDeath.SetActive(false);
+        }
         if (currentHP >= 100)
         {
             currentHP = 100;

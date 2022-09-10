@@ -58,15 +58,19 @@
   <ItemGroup>
     <Compile Include="Assets\Script\Player\PickUpController.cs" />
     <Compile Include="Assets\Script\Player\MouseLook.cs" />
+    <Compile Include="Assets\Script\Freezing.cs" />
     <Compile Include="Assets\Script\Player\PlayerController.cs" />
     <Compile Include="Assets\Script\Player\HealthBar.cs" />
     <Compile Include="Assets\Script\CameraShake.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShaker.cs" />
+    <Compile Include="Assets\Script\Lantern.cs" />
     <Compile Include="Assets\Script\Hazard\Hazard.cs" />
+    <Compile Include="Assets\Script\LightItem.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakeInstance.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnTrigger.cs" />
     <Compile Include="Assets\Script\StatusEffect\StatusData.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
+    <Compile Include="Assets\Script\KeyItem.cs" />
     <Compile Include="Assets\Script\StatusEffect\IEffectable.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\ShakeDemo.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeByDistance.cs" />

@@ -127,7 +127,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 3
+  m_Height: 1.8
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.8
@@ -150,6 +150,7 @@ MonoBehaviour:
   maxHP: 100
   currentHP: 0
   healthBar: {fileID: 0}
+  nearDeath: {fileID: 0}
   Lose: {fileID: 0}
   speed: 5
   gravity: -9.81
@@ -161,10 +162,6 @@ MonoBehaviour:
     m_Bits: 64
   isSprinting: 0
   sprintingSpeed: 5
-  isCrouching: 0
-  standHeight: 2.8
-  crouchHeight: 0.8
-  crouchingSpeed: -2
 --- !u!1 &5932265341659343157
 GameObject:
   m_ObjectHideFlags: 0
