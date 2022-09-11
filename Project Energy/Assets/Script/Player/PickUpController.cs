@@ -8,7 +8,7 @@ public class PickUpController : MonoBehaviour
     private GameObject heldObj;
     private Rigidbody heldObjRB;
 
-    [SerializeField] private float pickupRange = 5.0f;
+    [SerializeField] private float pickupRange = 8.0f;
     [SerializeField] private float pickupForce = 150.0f;
 
     // Start is called before the first frame update

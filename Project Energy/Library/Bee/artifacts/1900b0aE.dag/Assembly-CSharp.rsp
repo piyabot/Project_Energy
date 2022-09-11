@@ -348,17 +348,17 @@
 "Assets/EZ Camera Shake/Scripts/Utilities/CameraUtilities.cs"
 "Assets/Script/CameraShake.cs"
 "Assets/Script/FinishPoint.cs"
-"Assets/Script/Freezing.cs"
 "Assets/Script/Hazard/Hazard.cs"
+"Assets/Script/Hazard/StatusEffect/IEffectable.cs"
+"Assets/Script/Hazard/StatusEffect/StatusData.cs"
 "Assets/Script/KeyItem.cs"
 "Assets/Script/Lantern.cs"
-"Assets/Script/LightItem.cs"
+"Assets/Script/Map.cs"
+"Assets/Script/Player/Freezing.cs"
 "Assets/Script/Player/HealthBar.cs"
 "Assets/Script/Player/MouseLook.cs"
 "Assets/Script/Player/PickUpController.cs"
 "Assets/Script/Player/PlayerController.cs"
-"Assets/Script/StatusEffect/IEffectable.cs"
-"Assets/Script/StatusEffect/StatusData.cs"
 -langversion:9.0
 
 /deterministic
