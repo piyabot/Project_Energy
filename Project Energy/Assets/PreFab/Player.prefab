@@ -152,16 +152,16 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   nearDeath: {fileID: 0}
   Lose: {fileID: 0}
-  speed: 5
+  speed: 3.5
   gravity: -9.81
-  jumpHeight: 3
+  jumpHeight: 2
   groundCheck: {fileID: 5932265341659343158}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 64
   isSprinting: 0
-  sprintingSpeed: 5
+  sprintingSpeed: 3
 --- !u!1 &5932265341659343157
 GameObject:
   m_ObjectHideFlags: 0
