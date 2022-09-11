@@ -34,8 +34,19 @@ public class Car : MonoBehaviour
             repairText.SetActive(false);
             carLight.SetActive(true);
             survive.SetActive(true);
+            { Time.timeScale = 0; };
         }
-        else if (gas.activeInHierarchy == false && battery.activeInHierarchy == false && radio.activeInHierarchy == false && inRange && Input.GetMouseButtonDown(0))
+        else if (gas.activeInHierarchy == false && inRange && Input.GetMouseButtonDown(0))
+        {
+            repairText.SetActive(false);
+            failText.SetActive(true);
+        }
+        else if (battery.activeInHierarchy == false && inRange && Input.GetMouseButtonDown(0))
+        {
+            repairText.SetActive(false);
+            failText.SetActive(true);
+        }
+        else if (radio.activeInHierarchy == false && inRange && Input.GetMouseButtonDown(0))
         {
             repairText.SetActive(false);
             failText.SetActive(true);

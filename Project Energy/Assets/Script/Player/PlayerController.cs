@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IEffectable
 {
@@ -84,8 +85,9 @@ public class PlayerController : MonoBehaviour, IEffectable
         {
             currentHP = 0;
             Lose.SetActive(true);
+            { Time.timeScale = 0; }
         }
-        if (currentHP <= 30)
+        if (currentHP <= 50)
         {
             nearDeath.SetActive(true);
         }
@@ -96,6 +98,15 @@ public class PlayerController : MonoBehaviour, IEffectable
         if (currentHP >= 100)
         {
             currentHP = 100;
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 

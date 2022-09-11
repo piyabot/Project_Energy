@@ -16,9 +16,6 @@ ScriptsOnlyBuild:
     - Warm
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.ProBuilderEditor
-    - UnityEditor.ProBuilder.ProbuilderMoveTool
-    - UnityEditor.ProBuilder.ProbuilderRotateTool
-    - UnityEditor.ProBuilder.ProbuilderScaleTool
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -152,7 +149,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5148}
     - Class: 114
-      Script: {instanceID: 73990}
+      Script: {instanceID: 5262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,6 +169,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Main_Level.unity:
     - Class: 1
@@ -240,6 +239,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3094}
     - Class: 114
       Script: {instanceID: 3352}
+    - Class: 114
+      Script: {instanceID: 3484}
     - Class: 114
       Script: {instanceID: 3814}
     - Class: 114
@@ -837,6 +838,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BGM
+  - hash:
+      serializedVersion: 2
       Hash: 0ff4547fb097f640004c63315e051535
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -877,14 +884,9 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BGM
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Main_Level.unity
-  playerPath: D:/University/Integrated Digital Design/Build/Project Energy.exe
+  playerPath: D:/University/Integrated Digital Design/Build/In_The_Cold_PiyabootPrayong6209644704/Project
+    Energy.exe

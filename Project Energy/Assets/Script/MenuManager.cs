@@ -9,6 +9,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main_Level");
     }
+    public void END()
+    {
+        SceneManager.LoadScene("THE_END");
+    }
     public void exit()
     {
         Application.Quit();

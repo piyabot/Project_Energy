@@ -76,10 +76,10 @@
     <Compile Include="Assets\Script\Hazard\StatusEffect\IEffectable.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\ShakeDemo.cs" />
     <Compile Include="Assets\Script\Objective\Car.cs" />
+    <Compile Include="Assets\Script\BGM.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeByDistance.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnKeyPress.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
-    <Compile Include="Assets\Script\BGM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
