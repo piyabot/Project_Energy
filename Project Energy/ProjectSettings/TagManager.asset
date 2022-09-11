@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cold
   - Warm
+  - Music
   layers:
   - Default
   - TransparentFX
