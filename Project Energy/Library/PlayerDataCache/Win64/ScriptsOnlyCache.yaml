@@ -888,5 +888,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Main_Level.unity
-  playerPath: D:/University/Integrated Digital Design/Build/In_The_Cold_PiyabootPrayong6209644704/Project
-    Energy.exe
+  playerPath: D:/University/Integrated Digital Design/P1/Build/Project Energy.exe

@@ -10,5 +10,7 @@ public class BGM : MonoBehaviour
         if (objs.Length > 1)
             Destroy(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
